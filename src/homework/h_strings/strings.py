@@ -1,4 +1,5 @@
 #main program
+from re import A
 import strings
 
 def create_string():
@@ -39,3 +40,14 @@ def loop_strings_for_range():
     for ch in lang:
         print(ch)
     
+
+def get_hammering_distance(dna1, dna2):
+
+    if len(dna1) != len(dna2):
+        raise ValueError("DNA strands must be of equal length")
+    
+    return sum(1 for x, y in zip(dna1, dna2) if x != y)
+
+def get_dna_complement(dna):
+    complement = {'A': 'T', 'T': 'A', 'C': 'G', 'G': 'C'}
+    return ''.join(complement[nuc] for nuc in dna[::-1])
