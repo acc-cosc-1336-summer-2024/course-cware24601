@@ -1,4 +1,5 @@
 import unittest
+from unittest.main import main
 
 from src.homework.h_strings.strings import get_hamming_distance
 from src.homework.h_strings.strings import get_dna_complement
@@ -21,9 +22,10 @@ class Test_Config(unittest.TestCase):
         result = get_dna_complement(dna)
         self.assertEqual(result, expected_result)
 
+        print (result)
+
         
 
-if __name__ == '__main__':
-    unittest.main() 
+main()
 
     
