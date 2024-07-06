@@ -1,6 +1,5 @@
 import unittest
 
-from src.examples.h_strings.strings import test_config
 from src.homework.h_strings.strings import get_hamming_distance
 from src.homework.h_strings.strings import get_dna_complement
 
@@ -9,15 +8,22 @@ class Test_Config(unittest.TestCase):
 
     def test_get_hamming_distance(self):
 
-        distance = get_hamming_distance("GAGCCTACTAACGGGAT", "CATCGTAATGACGGCCT")
-        self.assertEqual(distance, 7)
-        print(distance)
+        result = get_hamming_distance(self)
+        dna1 = 'GAGCCTACTAACGGGAT'
+        dna2 = 'CATCGTAATGACGGCCT'
+        expected_result = 7
+        self.assertEqual(result, expected_result)
+        print(result)
 
     def test_dna_complement(self):
-        complement = get_dna_complement("AAAACCCGGT")
-        self.assertEqual(complement, "ACCGGGTTTT")
+        dna = 'AAAACCCGGT'
+        expected_result = 'ACCGGGTTTT'
+        result = get_dna_complement(dna)
+        self.assertEqual(result, expected_result)
+
         
-        print(complement)
 
 if __name__ == '__main__':
-    unittest.main()
+    unittest.main() 
+
+    

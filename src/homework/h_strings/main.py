@@ -1,20 +1,27 @@
 #main program
+from unittest.main import main
 import strings
 
 #strings.create_string()
 #strings.access_characters_in_a_string()
 #stings.cannot_change_string_characters()
 #strings.loop_string_w_while()
-strings.loop_string_w_for()
-strings.loop_strings_for_range()
+
 
 import math
-from tests.homework.h_strings 
+def get_hamming_distance(dna1, dna2):
+    if len(dna1) != len(dna2):
+        return "Strings are not equal length"
+    return sum(c1 != c2 for c1, c2 in zip(dna1, dna2))
+
+def get_dna_complement(dna):
+    complement = {'A': 'T', 'T': 'A', 'C': 'G', 'G': 'C'}
+    return ''.join(complement[base] for base in dna[::-1])
 
 
-def main():
+def display_menu():
     while True:
-        print("\nMenu")
+        print(' Menu')
         print("1 - Hamming Distance")
         print("2 - DNA Complement")
         print("3 - Exit")
