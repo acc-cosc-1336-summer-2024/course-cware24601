@@ -1,20 +1,23 @@
 import unittest
 
 from src.examples.h_strings.strings import test_config
-from src.homework.h_strings.strings import get_hammering_distance
+from src.homework.h_strings.strings import get_hamming_distance
 from src.homework.h_strings.strings import get_dna_complement
 
-class Test_Config(unittest.Test_Case)
+class Test_Config(unittest.TestCase):
     
-    def test_configuration(self):
-        self.assertEqual(True, test_config())
 
-    def test_access_charters_in_a_string(self):
-        lang = "Python"
+    def test_get_hamming_distance(self):
 
-        self.assertEqual()
+        distance = get_hamming_distance("GAGCCTACTAACGGGAT", "CATCGTAATGACGGCCT")
+        self.assertEqual(distance, 7)
+        print(distance)
 
+    def test_dna_complement(self):
+        complement = get_dna_complement("AAAACCCGGT")
+        self.assertEqual(complement, "ACCGGGTTTT")
+        
+        print(complement)
 
-def test_get_hamming_distance():
-    dna1 = "GAGCCTACTAACGGGAT"
-    dna2 = "CATCGTAATGACGGCCT"
+if __name__ == '__main__':
+    unittest.main()

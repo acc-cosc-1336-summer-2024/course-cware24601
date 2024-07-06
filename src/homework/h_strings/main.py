@@ -9,53 +9,36 @@ strings.loop_string_w_for()
 strings.loop_strings_for_range()
 
 import math
+from tests.homework.h_strings 
 
-def get_factorial(num):
-    if num == 0 or num == 1:
-        return 1
-    else:
-        return num * get(num-1)
-    
-def sum_odd_numbers(num):
-    return sum(i for i in range(1, num+1, 2))
 
 def main():
     while True:
-        print("Homework 3 Menu")
-        print("1-Factorial")
-        print("2-Sum Odd Numbers")
-        print("3-Exit")
+        print("\nMenu")
+        print("1 - Hamming Distance")
+        print("2 - DNA Complement")
+        print("3 - Exit")
 
-        user = int(input("Choose an option"))
+        choice = input("Enter your choice (1/2/3): ")
 
-        if user == 1:
-            while True:
-                num = int(input("Enter a number (0 < number < 10):"))
-                if 0 < num < 10:
-                    break
-                    
-                    print("Invalid input. Please try again.")
-                result = factorial(num)
-                print(f"The factorial of {num is {result}}")
+        if choice == '1':
+            str1 = input("Enter the first DNA string: ")
+            str2 = input("Enter the second DNA string: ")
+            result = strings.get_hamming_distance(str1, str2)
+            print("Hamming Distance: ", result)
 
+        elif choice == '2':
+            dna = input("Enter the first DNA string: ")
+            result = strings.get_dna_complement(dna)
+            
+            print("DNA Complement: ", result)
 
-        elif user == 2:
-            while True:
-                num = in(input("Enter a number(0 < number < 100)"):
-                         
-                         if 0 < num < 100
-                            break
-                        print("Invalid input. Please try again.")
-                    result = sum_odd_numbers(num)
-                    print(f"The sum of odd numbers to {num} is {result}")
+        elif choice == '3':
+            print("Exiting the program.")
+            break
 
+        else:
+            print("Invalid choice. Please 1, 2, or 3.")
 
-                elif user == 3:
-                exit_confirm = input("Are you sure you want to exit? (yes/no): ")
-
-                if exit_confirm.lower() == 'yes':
-                break
-                
-                continue_confirm = input("Do you want to continue using the menu? (yes/no) ")
-                if continue_confirm.lower() != 'yes':
-                break
+    if __name__ == "__main__":
+        main()
