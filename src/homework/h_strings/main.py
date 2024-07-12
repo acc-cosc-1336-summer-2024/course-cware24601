@@ -1,4 +1,6 @@
 #main program
+from tkinter import Menu
+import unittest
 from unittest.main import main
 import strings
 
@@ -36,7 +38,9 @@ def menu():
             print('Invalid choice. Enter 1, 2, or 3')
 
 
-if __name__ == '__main__':
-    menu()
+
+
+
+me()
         
             
