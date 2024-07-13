@@ -1,7 +1,6 @@
 #main program
 from tkinter import Menu
 import unittest
-from unittest.main import main
 import strings
 
 
@@ -41,6 +40,6 @@ def menu():
 
 
 
-me()
+menu()
         
             
