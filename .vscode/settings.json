@@ -6,5 +6,8 @@
         "devcontainers",
         "GAGCCTACTAACGGGAT",
         "TTTTGGGCCA"
+    ],
+    "python.analysis.extraPaths": [
+        "./src/homework/j_classes"
     ]
 }
